@@ -129,7 +129,7 @@ execute_coremark()
 	#
 	# Ubuntu breaking without this setting.
 	#
-	uname -a | grep -q Ubuntu
+	uname -a | grep -q -E 'Ubuntu|tegra'
 	if [ $? -eq 0 ]; then
 		declare -x PORT_DIR="linux64"
 	fi
